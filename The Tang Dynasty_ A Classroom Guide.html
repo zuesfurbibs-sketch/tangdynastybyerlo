@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Tang Dynasty: A Classroom Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2ee;--panel:#fff;--ink:#17282a;--mute:#4d6162;--jade:#1f6b5c;--red:#b8322a;--gold:#9a6f12;--line:#c9d4cd;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a1a;--panel:#172626;--ink:#e6ece8;--mute:#9db2ad;--jade:#5fc2aa;--red:#f0776d;--gold:#e0b04d;--line:#2c4142}}
+:root[data-theme="dark"]{--bg:#0f1a1a;--panel:#172626;--ink:#e6ece8;--mute:#9db2ad;--jade:#5fc2aa;--red:#f0776d;--gold:#e0b04d;--line:#2c4142}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 "Source Serif 4",Georgia,serif}
+h1,h2,h3{font-weight:600;line-height:1.2;margin:0 0 .5em}
+a{color:var(--jade)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+header.hero{background:var(--jade);color:#fff;padding:56px 0 48px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);max-width:14ch}
+.hero p{max-width:46ch;margin:0;opacity:.95}
+.char{font-family:"Ma Shan Zheng","Noto Serif SC",serif;font-size:clamp(7rem,24vw,14rem);line-height:1;color:#fff;opacity:.92;text-shadow:6px 6px 0 rgba(0,0,0,.18)}
+.seal{display:inline-block;background:var(--red);color:#fff;padding:2px 10px;border-radius:2px;font-size:.85rem;margin-bottom:14px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--panel);border-bottom:1px solid var(--line);z-index:5}
+nav .wrap{display:flex;gap:4px;overflow-x:auto}
+nav a{padding:12px 14px;text-decoration:none;color:var(--ink);white-space:nowrap;font-size:.95rem}
+nav a:hover{color:var(--red)}
+section{padding:48px 0 12px}
+section h2{font-size:1.8rem;border-left:6px solid var(--red);padding-left:12px}
+.lead{color:var(--mute);max-width:62ch}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:22px 0}
+.fact{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--gold);padding:14px 16px}
+.fact b{display:block;font-size:1.5rem;color:var(--jade)}
+.fact span{font-size:.92rem;color:var(--mute)}
+.tl{display:flex;gap:6px;overflow-x:auto;padding:8px 0 12px;border-bottom:3px solid var(--jade)}
+.tl button{flex:0 0 auto;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:8px 12px;font:inherit;font-size:.9rem;cursor:pointer;border-radius:4px}
+.tl button b{display:block;color:var(--red)}
+.tl button[aria-pressed="true"]{background:var(--jade);color:#fff;border-color:var(--jade)}
+.tl button[aria-pressed="true"] b{color:#fff}
+.detail{background:var(--panel);border:1px solid var(--line);padding:20px 22px;margin-top:14px;min-height:150px}
+.detail h3{color:var(--jade)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
+.card{background:var(--panel);border:1px solid var(--line);padding:16px 18px}
+.card h3{font-size:1.1rem;color:var(--jade)}
+.card p{margin:0;font-size:.98rem}
+.tabs{display:flex;gap:8px;margin:18px 0}
+.tabs button{font:inherit;padding:9px 18px;border:2px solid var(--jade);background:transparent;color:var(--ink);cursor:pointer;border-radius:4px}
+.tabs button[aria-selected="true"]{background:var(--jade);color:#fff}
+.q{background:var(--panel);border:1px solid var(--line);padding:20px 22px}
+.q .opts{display:grid;gap:8px;margin:14px 0}
+.q .opts button{font:inherit;text-align:left;padding:10px 14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;border-radius:4px}
+.q .opts button.ok{background:var(--jade);color:#fff;border-color:var(--jade)}
+.q .opts button.no{background:var(--red);color:#fff;border-color:var(--red)}
+.next{font:inherit;padding:9px 18px;background:var(--red);color:#fff;border:0;border-radius:4px;cursor:pointer}
+dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;background:var(--panel);border:1px solid var(--line);padding:16px 20px}
+dt{font-weight:600;color:var(--red)}dd{margin:0}
+ol,ul{padding-left:1.2em}
+li{margin-bottom:.5em}
+footer{margin-top:56px;padding:26px 0;border-top:1px solid var(--line);color:var(--mute);font-size:.9rem}
+[hidden]{display:none!important}
+@media (max-width:560px){.hero .wrap{grid-template-columns:1fr}.char{display:none}dl{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<div><span class="seal">618–907 CE</span>
+<h1>The Tang Dynasty</h1>
+<p>Three centuries when Chang'an was among the largest cities on Earth, poetry flourished, and the Silk Road carried ideas as well as silk. A guide for students to explore and teachers to use.</p></div>
+<div class="char" aria-hidden="true">唐</div>
+</div></header>
+
+<nav aria-label="Sections"><div class="wrap">
+<a href="#overview">Overview</a><a href="#timeline">Timeline</a><a href="#life">Life &amp; culture</a><a href="#legacy">Legacy</a><a href="#quiz">Quiz</a><a href="#teachers">For teachers</a><a href="#contact">Contact</a>
+</div></nav>
+
+<main class="wrap">
+<section id="overview">
+<h2>Overview</h2>
+<p class="lead">The Tang followed the short-lived Sui dynasty. It united China again, expanded its borders, and welcomed traders, monks and envoys from across Asia. Many historians call it a golden age.</p>
+<div class="facts">
+<div class="fact"><b>289 years</b><span>618 to 907 CE</span></div>
+<div class="fact"><b>Chang'an</b><span>the capital, home to about a million people</span></div>
+<div class="fact"><b>Li Yuan</b><span>founder, reigned as Emperor Gaozu</span></div>
+<div class="fact"><b>755</b><span>the An Lushan Rebellion begins</span></div>
+</div>
+</section>
+
+<section id="timeline">
+<h2>Timeline</h2>
+<p class="lead">Select an event to read about it.</p>
+<div class="tl" id="tl" role="group" aria-label="Timeline events"></div>
+<div class="detail" id="detail" aria-live="polite"></div>
+</section>
+
+<section id="life">
+<h2>Life and culture</h2>
+<div class="cards">
+<div class="card"><h3>Chang'an, a world city</h3><p>Laid out on a strict grid with walled wards and two big markets. Merchants from Persia, Central Asia and Korea lived and traded here.</p></div>
+<div class="card"><h3>The Silk Road</h3><p>Caravans carried silk and tea west, and brought horses, glassware, music and new religions east.</p></div>
+<div class="card"><h3>Poetry</h3><p>Li Bai wrote with bold imagination, while Du Fu described the suffering of ordinary people. Over 48,000 Tang poems survive.</p></div>
+<div class="card"><h3>Buddhism</h3><p>The monk Xuanzang travelled to India (629–645) and returned with hundreds of texts. His journey inspired the novel <i>Journey to the West</i>.</p></div>
+<div class="card"><h3>Exams and officials</h3><p>The Tang expanded civil service exams, giving talented men from outside the great families a path into government.</p></div>
+<div class="card"><h3>Art and goods</h3><p>Tang potters made lively tri-color glazed (sancai) horses and camels. Tea drinking spread, and Lu Yu wrote the <i>Classic of Tea</i>.</p></div>
+</div>
+</section>
+
+<section id="legacy">
+<h2>Legacy</h2>
+<p class="lead">The dynasty gave lasting things to the world. Printing is one: the <i>Diamond Sutra</i> of 868 is the oldest dated printed book. Late Tang alchemists also discovered gunpowder. Even today, many overseas Chinese communities are called "Tang people" and Chinatowns are "Tang streets" in Chinese.</p>
+<h3>Key words</h3>
+<dl>
+<dt>Chang'an</dt><dd>The Tang capital, modern Xi'an.</dd>
+<dt>Silk Road</dt><dd>A network of trade routes linking China with Central Asia and beyond.</dd>
+<dt>Sancai</dt><dd>"Three colors": glazed pottery in green, amber and cream.</dd>
+<dt>Rebellion</dt><dd>An armed uprising against a ruler or government.</dd>
+<dt>Civil service exam</dt><dd>A test used to choose government officials by ability.</dd>
+</dl>
+</section>
+
+<section id="quiz">
+<h2>Test yourself</h2>
+<div class="q" id="quiz"></div>
+</section>
+
+<section id="teachers">
+<h2>For teachers</h2>
+<p class="lead">Ready-to-use ideas for a lesson or a short unit. Adapt for age and time available.</p>
+<div class="tabs" role="tablist">
+<button role="tab" aria-selected="true" data-t="a">Activities</button>
+<button role="tab" aria-selected="false" data-t="d">Discussion</button>
+<button role="tab" aria-selected="false" data-t="o">Objectives</button>
+</div>
+<div id="tp-a" class="card"><ol>
+<li><b>Chang'an market role play (30 min).</b> Students act as traders, monks and officials, and explain what they carry and why they came.</li>
+<li><b>Poem close reading (20 min).</b> Read a Li Bai or Du Fu poem in translation. What does it show about daily life?</li>
+<li><b>Map the Silk Road (25 min).</b> Mark the route and the goods that moved in each direction.</li>
+<li><b>Two-emperor debate (30 min).</b> Compare Taizong and Xuanzong: who was the better ruler?</li>
+</ol></div>
+<div id="tp-d" class="card" hidden><ol>
+<li>Why did the Tang welcome foreigners? What were the risks?</li>
+<li>Wu Zetian ruled as emperor from 690 to 705. How do we judge a ruler when sources were written by her critics?</li>
+<li>What made a dynasty that peaked around 750 collapse in 907?</li>
+<li>Which Tang invention has the most impact on your life today?</li>
+</ol></div>
+<div id="tp-o" class="card" hidden><p>By the end, students can:</p><ul>
+<li>Place the Tang on a timeline and name its main phases.</li>
+<li>Describe two ways the Tang connected with other cultures.</li>
+<li>Explain how one event, the An Lushan Rebellion, weakened the dynasty.</li>
+<li>Use a poem as a primary source.</li>
+</ul></div>
+</section>
+</main>
+
+<section id="contact"><div class="wrap"><h2>Contact</h2>
+<div class="card"><h3>DAMO, ERLO JEROME V.</h3><p>BSE in Social Studies</p><p><a href="mailto:evd108964729@gmail.com">evd108964729@gmail.com</a></p></div></div></section>
+<footer><div class="wrap">Dates and figures are approximate, and scholars debate some details. Check with your curriculum's sources before using in assessments.</div></footer>
+
+<script>
+var ev=[
+{y:"618",t:"Founding",d:"Li Yuan takes the throne after the Sui dynasty collapses and becomes Emperor Gaozu. Chang'an becomes his capital."},
+{y:"626",t:"Taizong takes power",d:"Li Shimin seizes the throne and rules until 649. His Zhenguan era is remembered for able ministers, strong armies and open government."},
+{y:"629",t:"Xuanzang leaves for India",d:"The monk sets off to find Buddhist scriptures. He returns in 645 with hundreds of texts and spends his life translating them."},
+{y:"690",t:"Wu Zetian",d:"Empress Wu declares her own dynasty, the Zhou, and rules until 705. She is the only woman to rule China as emperor in her own right."},
+{y:"712",t:"Xuanzong's golden age",d:"Emperor Xuanzong reigns for over forty years. Poetry, music and trade reach their peak, and Li Bai and Du Fu are both active."},
+{y:"755",t:"An Lushan Rebellion",d:"A frontier general rises against the throne. The war lasts until 763, kills millions, and leaves the Tang weak and reliant on regional governors."},
+{y:"845",t:"Buddhism restricted",d:"Emperor Wuzong orders thousands of monasteries closed, partly to seize their wealth. Many temples are destroyed."},
+{y:"875",t:"Huang Chao uprising",d:"Famine and heavy taxes spark a huge rebellion. Rebels capture Chang'an in 880 and the government never recovers."},
+{y:"907",t:"The end",d:"General Zhu Wen deposes the last emperor. China splits into the Five Dynasties and Ten Kingdoms."}];
+var tl=document.getElementById("tl"),dt=document.getElementById("detail");
+function show(i){
+ [].forEach.call(tl.children,function(b,j){b.setAttribute("aria-pressed",j===i)});
+ dt.innerHTML="<h3>"+ev[i].y+": "+ev[i].t+"</h3><p>"+ev[i].d+"</p>";
+}
+ev.forEach(function(e,i){var b=document.createElement("button");b.innerHTML="<b>"+e.y+"</b>"+e.t;b.onclick=function(){show(i)};tl.appendChild(b)});
+show(0);
+
+var Q=[
+{q:"Which city was the Tang capital?",o:["Beijing","Chang'an","Nanjing"],a:1},
+{q:"Who was the only woman to rule China as emperor?",o:["Wu Zetian","Empress Lu","Cixi"],a:0},
+{q:"Which poet is famous for describing ordinary people's suffering?",o:["Li Bai","Du Fu","Confucius"],a:1},
+{q:"What began in 755 and badly weakened the Tang?",o:["The Grand Canal","The An Lushan Rebellion","The Great Wall"],a:1},
+{q:"What is the oldest dated printed book, made in 868?",o:["Diamond Sutra","Classic of Tea","Analects"],a:0}];
+var qi=0,sc=0,qb=document.getElementById("quiz");
+function ask(){
+ if(qi>=Q.length){qb.innerHTML="<h3>You scored "+sc+" out of "+Q.length+"</h3><button class='next' id='rs'>Try again</button>";document.getElementById("rs").onclick=function(){qi=0;sc=0;ask()};return}
+ var c=Q[qi];qb.innerHTML="<p><b>Question "+(qi+1)+" of "+Q.length+"</b></p><p>"+c.q+"</p><div class='opts'></div><button class='next' hidden>Next question</button>";
+ var os=qb.querySelector(".opts"),nx=qb.querySelector(".next");
+ c.o.forEach(function(t,i){var b=document.createElement("button");b.textContent=t;b.onclick=function(){
+  [].forEach.call(os.children,function(x,j){x.disabled=true;if(j===c.a)x.className="ok"});
+  if(i===c.a)sc++;else b.className="no";nx.hidden=false;nx.focus()};os.appendChild(b)});
+ nx.onclick=function(){qi++;ask()};
+}
+ask();
+
+[].forEach.call(document.querySelectorAll(".tabs button"),function(b){b.onclick=function(){
+ [].forEach.call(document.querySelectorAll(".tabs button"),function(x){x.setAttribute("aria-selected",x===b)});
+ ["a","d","o"].forEach(function(k){document.getElementById("tp-"+k).hidden=(k!==b.dataset.t)})}});
+</script>
+</body>
+</html>
